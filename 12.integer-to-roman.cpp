@@ -20,7 +20,7 @@ std::pair<std::string,int> find_num(int x, const std::vector<std::pair<std::stri
             return table2[i];
         }
     }
-    return table2[table2.size() -1 ];
+    return table2[table2.size() - 1];
 
 }
 
