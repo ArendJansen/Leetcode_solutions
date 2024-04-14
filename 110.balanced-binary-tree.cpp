@@ -35,10 +35,6 @@ int maxDepth(TreeNode* root) {
 class Solution {
 public:
     bool isBalanced(TreeNode* root) {
-        int diff;
-        bool ltrue;
-        bool rtrue;
-
         if (root == nullptr){
             return true;
         }
@@ -49,8 +45,8 @@ public:
             return false;
         }
         else {
-            ltrue = isBalanced(root -> left);
-            rtrue = isBalanced(root -> right);
+            bool ltrue = isBalanced(root -> left);
+            bool rtrue = isBalanced(root -> right);
 
             if(!ltrue || !rtrue){
                 return false;
