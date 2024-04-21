@@ -9,7 +9,7 @@ class Solution {
 public:
     int arrangeCoins(int n) {
         long long  x = 8LL * n;
-        int y = (std::sqrt(x + 1) -1) /2 ;
+        int y = (std::sqrt(x + 1) -1) / 2;
         return y;
     }
 };
