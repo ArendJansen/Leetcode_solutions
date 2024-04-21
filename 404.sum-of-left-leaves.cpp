@@ -40,7 +40,6 @@ public:
         if (root == nullptr){
             return 0;
         }
-        
         return helperLeftLeaves(root -> left, true) + helperLeftLeaves(root -> right, false);
     }
 };
