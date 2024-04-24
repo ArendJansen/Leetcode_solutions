@@ -9,8 +9,8 @@ class Solution {
 public:
     int islandPerimeter(vector<vector<int>>& grid) {
         int res =0;
-        int ncol = grid.size();
-        int nrow = grid[0].size();
+        int nrow = grid.size();
+        int ncol = grid[0].size();
         for (int i =0; i < grid.size(); ++i){
             for (int j =0; j < grid[i].size(); ++j){
                 if (grid[i][j] == 1){
@@ -18,13 +18,13 @@ public:
                     if (i != 0 && grid[i-1][j] == 1){
                         --sides;
                     }
-                    if (i != ncol - 1 && grid[i+1][j] == 1){
+                    if (i != nrow - 1 && grid[i+1][j] == 1){
                         --sides;
                     }
                     if (j != 0 && grid[i][j-1] ==1){
                         --sides;
                     }
-                    if (j != nrow -1 && grid[i][j+1] == 1){
+                    if (j != ncol -1 && grid[i][j+1] == 1){
                         --sides;
                     }
                     res += sides;
