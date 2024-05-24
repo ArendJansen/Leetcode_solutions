@@ -9,14 +9,14 @@ class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
 
-        if (intervals.size() <= 1){
-            return intervals;
-        }
+        // if (intervals.size() <= 1){
+        //     return intervals;
+        // }
 
         std::sort(
             intervals.begin(), 
             intervals.end(),
-            [](const std::vector<int>& a, const std::vector<int>&b){
+            [](const std::vector<int>& a, const std::vector<int>& b){
                 return a[0] < b[0];
             });
 
