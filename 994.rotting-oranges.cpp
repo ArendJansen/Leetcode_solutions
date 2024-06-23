@@ -45,7 +45,7 @@ public:
         while(!que.empty()){
 
             int l = que.size();
-             ++count;
+            ++count;
             for (int k = 0; k < l; ++k){
                 for (int m = 0; m < 4; ++m){
                     int x = que.front().first + offsets[m][0];
@@ -56,7 +56,6 @@ public:
                     }
                     if (set.count(std::make_pair(x,y)) > 0){
                         set.erase(std::make_pair(x,y));
-                        // grid[x][y] = 2;
                         que.push(std::make_pair(x,y));
                     }
                 }
