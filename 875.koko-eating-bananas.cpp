@@ -23,12 +23,11 @@ public:
             }
         }
         std::sort(piles.begin(), piles.end());
-        int l = 1, r = piles[piles.size() -1], m = 0, val = 0;
+        int l = 1, r = piles[piles.size() -1], m = 0;
         int ans = 0;
         long long count = 0;
         while(l <= r){
             m = l + (r - l) / 2;
-            // std::cout << "M equals: " <<  m << "\n";
             count = 0;
             for (int i = 0;  i < piles.size(); ++i){
                 if (piles[i] % m == 0){
@@ -39,7 +38,6 @@ public:
 
                 }
             }
-            // std::cout << "Count equals: " << count << "\n\n";
             if (count == h){
                 ans = m; 
                 r = m -1;
