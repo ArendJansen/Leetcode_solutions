@@ -19,16 +19,17 @@ public:
         int j,
         std::vector<std::vector<int>> & cache){
 
+            
+            if (cache[i][j] != -1){
+                return cache[i][j];
+            }
+
             if (j == word2.length()){
                 return cache[i][j] = word1.length() - i;
             }
 
             if(i == word1.length()){
                 return cache[i][j] = word2.length() - j;
-            }
-
-            if (cache[i][j] != -1){
-                return cache[i][j];
             }
 
             if (word1[i] == word2[j]){
@@ -43,7 +44,6 @@ public:
 
         }
     int minDistance(string word1, string word2) {
-        // std::vector<std::vector<std::vector<int>>> cache(word1.length(), vector<vector<int>>(word2.length()));
         std::vector<std::vector<int>> cache(word1.length() + 1,std::vector<int>(word2.length() + 1,-1));
         return dp(word1,word2,0,0,cache);
     }
