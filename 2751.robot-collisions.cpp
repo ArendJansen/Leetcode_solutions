@@ -31,26 +31,19 @@ public:
     std::sort(health_with_index.begin(), health_with_index.end());
     std::sort(dir_with_index.begin(), dir_with_index.end());
 
-    // Extract the sorted healths
-    // std::vector<int> sorted_healths;
+;
     string sorted_dirs;
-    // for (const auto& pair : health_with_index) {
-    //     sorted_healths.push_back(pair.second);
-    // }
     for (const auto& pair : dir_with_index) {
         sorted_dirs.push_back(pair.second);
     }    
     
-    // healths = sorted_healths;
     directions = sorted_dirs;
-    // std::sort(positions.begin(),positions.end());
     
     std::stack<std::pair<int, std::pair<int,int>>> stk;
     bool add = true;
 
     for (int i = 0;  i < positions.size(); ++i){
         add = true;
-        // curr = health_with_index[i].second.first;
         if (directions[i] == 'L'){
             while(!stk.empty()){
                 if (stk.top().second.first < 0){
